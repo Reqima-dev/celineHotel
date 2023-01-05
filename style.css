@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.bc {
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  position: absolute;
+  opacity: 0.5;
+}
+img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderN {
+  display: none;
+  animation: fade 1.5s ease;
+}
+#slideFormat750px {
+  display: none;
+}
+
+@keyframes fade {
+  form {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.prev_button,
+.suiv_button {
+  width: 40px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(240, 240, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 11;
+  transition: var(--transition);
+}
+.prev_button {
+  left: 5rem;
+}
+.suiv_button {
+  right: 5rem;
+}
+.prev_button:hover,
+.suiv_button:hover {
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1.2rem 5rem;
+  z-index: 10;
+}
+
+.logo img {
+  width: 150px;
+  height: 150px;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 10rem;
+}
+
+h1 span {
+  color: #010101;
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: #fefe00;
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 15px;
+  background: rgb(31, 31, 245);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  background: blue;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 570px) {
+  .prev_button,
+  .suiv_button {
+    display: none;
+  }
+  h1 {
+    font-size: 35px;
+    margin-bottom: 2rem;
+  }
+}
